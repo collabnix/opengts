@@ -5,6 +5,7 @@ services:
   image: halilintar8/mcsaky-opengts
   ports:
    - 8080:8080
+   - 5055:5055
   environment:
    - MYSQL_ROOT_PASSWORD=mysqlroot
    - MYSQL_DBNAME=gts
@@ -15,7 +16,7 @@ services:
    - MYSQL_SERVICE_HOST=mysql
  mysql:
   container_name: opengts_mysql
-  image: halilintar8/mcsaky-opengts
+  image: mariadb:latest
   ports:
    - 3306:3306
   environment:
